@@ -211,6 +211,9 @@ async function main(): Promise<void> {
       background,
       fontSize,
       fontFamily,
+      palette,
+      colorSchema,
+      colorScheme,
     }: Args) => {
       await ensureLanguageLoaded(language ?? "javascript");
       const svg = renderHighlightedSvg({
@@ -221,6 +224,9 @@ async function main(): Promise<void> {
         background,
         fontSize,
         fontFamily,
+        palette,
+        colorSchema,
+        colorScheme,
       });
       return { content: [{ type: "text", text: svg }] };
     }
